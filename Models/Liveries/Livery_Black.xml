@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery>
+			<name type="string">All_Black</name>
+			<texture>Textures/Livery_Black.png</texture>
+		</livery>
+		<videocam type="bool">false</videocam>
+		<device type="bool">true</device>
+		<frontcone type="bool">true</frontcone>
+		<rearcone type="bool">true</rearcone>
+		<wingfins type="bool">true</wingfins>
+	</model>
+</sim>
+</PropertyList>

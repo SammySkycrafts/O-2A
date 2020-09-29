@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <path>Weapons_337G.ac</path>
+
+<animation>
+	<type>material</type>
+		<object-name>1911</object-name>
+		<object-name>45_Cal</object-name>
+		<object-name>B_Hanger</object-name>
+		<object-name>Hammer</object-name>
+		<object-name>O_Ring</object-name>
+		<object-name>O_Ring1</object-name>
+		<object-name>O_RIng2</object-name>
+		<object-name>O_RIng3</object-name>
+        <object-name>Plaque</object-name>
+		<object-name>Shotgun</object-name>
+</animation>
+
+    <animation>
+        <type>material</type>
+		<object-name>1911</object-name>
+		<object-name>45_Cal</object-name>
+		<object-name>B_Hanger</object-name>
+		<object-name>Hammer</object-name>
+		<object-name>O_Ring</object-name>
+		<object-name>O_Ring1</object-name>
+		<object-name>O_RIng2</object-name>
+		<object-name>O_RIng3</object-name>
+        <object-name>Plaque</object-name>
+		<object-name>Shotgun</object-name>
+        <emission>
+            <red>0.3</red>
+            <green>0.2</green>
+            <blue>0.2</blue>
+            <factor-prop>controls/lighting/panel-norm</factor-prop> 
+        </emission>
+    </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Plaque</object-name>
+		<condition>
+				<greater-than>
+					<property>controls/armament/guns</property>
+					<value>0</value>
+				</greater-than>
+		</condition>
+	</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Hammer</object-name>
+	 <property>controls/armament/guns</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.38205</x-m>
+		 <y-m> 0.52593</y-m>
+		 <z-m>-0.02862</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>Hammer</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/armament/guns</property>
+		 </binding>
+	 </action>
+</animation>
+
+</PropertyList>
