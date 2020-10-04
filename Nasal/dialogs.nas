@@ -1,11 +1,11 @@
 # MODEL INFO
 
 print(''); 
-print('MODEL INFO: Cessna 337G Skymaster');
+print('MODEL INFO: O-2A');
 print('---------------------------------'); 
-print('Type: Two-engine aircraft (civilian version)');
+print('Type: Two-engine aircraft (Military version)');
 print('Powerplant: 2 Continental IO-360-C piston engines in a push-pull line configuration, 210HP each one');
-print('Capacity: 1 pilot and 5 passengers');
+print('Capacity: 1 pilot and 1 Observer');
 print('---'); 
 print('Tipo: Avioneta bimotor (version civil)');
 print('Planta motriz: 2 motores a piston Continental IO-360-C de 210HP cada uno, de configuracion tira-empuje en linea');
@@ -19,11 +19,11 @@ print('February/Febrero 2012');
 # AIRCRAFT DIALOGS
 
 var dlg = {
-	checklists: gui.Dialog.new("/sim/gui/dialogs/Cessna337/checklists/dialog","Aircraft/Cessna337/Dialogs/Cessna337-checklists.xml"),
-	utility: gui.Dialog.new("/sim/gui/dialogs/Cessna337/utility/dialog","Aircraft/Cessna337/Dialogs/Cessna337-utility.xml"),
-	autopilot: gui.Dialog.new("/sim/gui/dialogs/Cessna337/autopilot/dialog","Aircraft/Cessna337/Dialogs/Navomatic400A-autopilot.xml")
+	checklists: gui.Dialog.new("/sim/gui/dialogs/O-2A/checklists/dialog","Aircraft/O-2A/Dialogs/O-2A-checklists.xml"),
+	utility: gui.Dialog.new("/sim/gui/dialogs/O-2A/utility/dialog","Aircraft/O-2A/Dialogs/O-2A-utility.xml"),
+	autopilot: gui.Dialog.new("/sim/gui/dialogs/O-2A/autopilot/dialog","Aircraft/O-2A/Dialogs/Navomatic400A-autopilot.xml")
 	};
-fgcommand("loadxml", props.Node.new({filename: "Aircraft/Cessna337/Dialogs/Cessna337-checklists-text.xml", targetnode: "/sim/gui/dialogs/Cessna337/checklists-list"}));
+fgcommand("loadxml", props.Node.new({filename: "Aircraft/O-2A/Dialogs/O-2A-checklists-text.xml", targetnode: "/sim/gui/dialogs/O-2A/checklists-list"}));
 	
 	
 #var checklists_dialog = gui.Dialog.new("/sim/gui/dialogs/dr400/checklists/dialog", getprop("/sim/aircraft-dir")~"/Dialogs/checklist/checklists.xml");

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--PropertyList>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.412 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.628 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.845 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -3.061 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.533 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.925 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model-->
+
+  <!-- Droite -->
+  <!--model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.412 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.628 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.845 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  3.061 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.533 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.925 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList-->

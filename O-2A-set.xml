@@ -5,7 +5,7 @@
 <sim>
 	<author>NC-687</author>
 	<description>O-2A</description>
-	<aircraft-version>v2020</aircraft-version>
+	<aircraft-version>V20200808</aircraft-version>
 	<rating>
 		<FDM type="int">3</FDM>
 		<systems type="int">3</systems>
@@ -19,6 +19,10 @@
 	<model>
 		<path archive="y">Aircraft/O-2A/Models/O-2A.xml</path>
 	</model>
+       <submodels>
+      	     <serviceable type="bool">true</serviceable>
+      		<path>Aircraft/O-2A/Models/Effects/guns/submodels.xml</path>
+       </submodels>
 
 	<!-- Configuracion de la vista del piloto -->
 
@@ -152,7 +156,9 @@
 		<livery>
 			<file type="string">Default</file>
 		</livery>
-	</model> 
+	</model>
+
+     <controls include="Systems/controls.xml"/> 
 
 	<crashed type="bool">0</crashed>
 	<yokes-visible type="bool">1</yokes-visible>
@@ -161,12 +167,6 @@
 	<help include="Dialogs/O-2A-help.xml"/>
 
 <!--SUBMODELS-->
-<submodels>
-<serviceable type="bool">true</serviceable>
-<path>Aircraft/O-2A/Armament/guns/O-2Asubmodels.xml</path>
-<path>Aircraft/O-2A/Armament/rockets/submodels.xml</path>
- <path>Aircraft/O-2A/Armament/payload/loads.xml</path>
-</submodels>
 
 	<systems>
 		<path>Aircraft/O-2A/Systems/O-2A-systems.xml</path>
@@ -182,11 +182,6 @@
 	<instrumentation>
 		<path>Aircraft/O-2A/Systems/O-2A-instrumentation.xml</path>
 	</instrumentation>
-
-  <!-- <alarms>
-    <stall-warning type="double">0</stall-warning>
-  </alarms> -->
-		
 </sim>
 
 <autopilot>
@@ -200,6 +195,11 @@
         <pitch-select type="double">0</pitch-select>
     </settings>
 </autopilot>
+
+     <!--armament>
+        <guns type="bool">0</guns>
+        <ammo type="double">0</ammo>
+     </armament-->
 
 <gear>
 	<gear n="0">
@@ -227,11 +227,15 @@
 			<master-bat>false</master-bat>
 			<master-alt>false</master-alt>
 			<primer type="bool">false</primer>
+			<mixture type="bool">0</mixture>
+			<propeller-pitch type="bool">0</propeller-pitch>
 			<fuel-pump type="bool">false</fuel-pump>
 		</engine>
 		<engine n="1">
 			<cowl-flaps-norm>0</cowl-flaps-norm>
 			<master-alt>false</master-alt>
+            <mixture type="bool">0</mixture>
+			<propeller-pitch type="bool">0</propeller-pitch>
 			<primer type="bool">false</primer>
 			<fuel-pump type="bool">false</fuel-pump>
 		</engine>
@@ -261,6 +265,13 @@
 		<landing-lights alias="/sim/rendering/als-secondary-lights/use-landing-light"/>
 		<taxi-light alias="/sim/rendering/als-secondary-lights/use-alt-landing-light"/>
 	</lighting>
+<armament>
+        <trigger-cannon alias="/controls/armament/trigger"/>
+        <trigger-rocket type="bool">false</trigger-rocket>
+        <trigger type="bool">false</trigger>
+           <guns type="bool">0</guns>
+            <ammo type="double">0</ammo><!--425 rounds per gun-->
+        </armament>
 </controls>
 
 <O-2A>
@@ -278,7 +289,7 @@
         <nav type="bool">false</nav>
     </switches>
     <push-pull-dial>
-        <pulled-out type="bool">true</pulled-out>
+        <pulled-out type="bool">false</pulled-out>
     </push-pull-dial>
     <bank-limit type="double">25.0</bank-limit>
     <powered type="bool">false</powered>
@@ -292,10 +303,9 @@
 		<file>Aircraft/O-2A/Nasal/liveries.nas</file>
 		<file>Aircraft/O-2A/Nasal/dialogs.nas</file>
 		<file>Aircraft/O-2A/Nasal/autostart.nas</file>
-        <file>Aircraft/O-2A/Nasal/tyresmoke.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/DME/KN62A.nas</file>
-        <file>Aircraft/O-2A/Models/Instruments/ELT/ELTmessage.nas</file>
+        <!--file>Aircraft/O-2A/Models/Instruments/ELT/ELTmessage.nas</file-->
 		<file>Aircraft/O-2A/Models/Instruments/Navomatic/navomatic.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/Transponder/KT76A.nas</file>
 		<script><![CDATA[
@@ -304,21 +314,16 @@
         ]]></script>
 	</O-2A>
 
-  <load>
-      <file>Aircraft/O-2A/Nasal/ext_stores.nas</file>
-    </load>
-
-
-
-<guns>
-<file>Aircraft/O-2A/Nasal/guns.nas</file>
-</guns>
-
 	<OPRF>
+    <file>Aircraft/O-2A/Nasal/blackout.nas</file>
 	<file>Aircraft/O-2A/Nasal/blacklist.nas</file>
-   <file>Aircraft/O-2A/Nasal/damage.nas</file>
-   <file>Aircraft/O-2A/Nasal/payloads.nas</file>
+    <file>Aircraft/O-2A/Nasal/damage.nas</file>
+    <!--file>Aircraft/O-2A/Nasal/payloads.nas</file-->
 	</OPRF>
+
+      <guns>
+        <file>Aircraft/O-2A/Nasal/weapons.nas</file>
+      </guns>
 
     <HobbsMeter>
         <file>Aircraft/O-2A/Models/Instruments/Hobbs/hobbs.nas</file>
@@ -368,8 +373,48 @@
 
 	<!-- configuracion teclado -->
 
-<input>
-	<keyboard>
+<input> 
+  <keyboard>
+        <key n="7">
+            <name>CTRL-g</name>
+            <mod-ctrl>
+                <desc>Select cannon</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>props.globals.getNode("controls/armament/trigger-cannon",1).alias("controls/armament/trigger");
+                            props.globals.getNode("controls/armament/trigger-rocket",1).unalias();
+                            props.globals.getNode("controls/armament/trigger-rocket",1).setBoolValue(0)</script>
+                </binding>
+            </mod-ctrl>
+        </key>
+
+        <key n="6">
+            <name>CTRL-f</name>
+                <desc>Select rockets</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>props.globals.getNode("controls/armament/trigger-rocket",1).alias("controls/armament/trigger");
+                            props.globals.getNode("controls/armament/trigger-cannon",1).unalias();
+                            props.globals.getNode("controls/armament/trigger-cannon",1).setBoolValue(0);</script>
+          </binding>
+      </key>
+
+
+      <key n="101">
+        <name>e</name>
+        <desc>Fire MG</desc>
+        <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
+          </binding>
+        </mod-up>
+      </key>
+
 		<key n="100">
 			<name>d</name>
 			<desc>Open/Close door</desc>
@@ -416,45 +461,6 @@
 		</key>       
 	</keyboard>
 </input>
- 
-<payload>
-	<weight>
-		<name type="string">Pilot</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Observer</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Gunner</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Rockets</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Miniguns</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Grenades</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-</payload>
 
 <fdm>
 	<jsbsim>

@@ -321,7 +321,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/O-2A/Models/Rear_337G.xml</path>
 	<offsets>
 		<x-m> 0.2400</x-m>
-		<y-m>-0.1400</y-m>
+		<y-m>-0.1250</y-m>
 		<z-m> 0.0500</z-m>
 	</offsets>
 </model>

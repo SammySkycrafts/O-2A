@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- ################ -->
+  <armament>
+    <trigger>  0 </trigger>
+    <trigger1> 0 </trigger1>
+    <trigger2> 0 </trigger2>
+  </armament>
+  <!-- ################ -->
+  
+</PropertyList>
