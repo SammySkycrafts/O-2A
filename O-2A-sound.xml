@@ -243,22 +243,22 @@
     </guns>
 
    <!-- rockets away -->
-    <crash>
+    <rockets>
       <name>rockets</name>
-       <mode>looped</mode>
+       <mode>once</mode>
         <property>controls/armament/trigger-rocket</property>
-      <path>Aircraft/O-2A/Sound/aircraft-explode.wav</path>
+      <path>Aircraft/O-2A/Sound/rocket_away.wav</path>
         <volume>
             <property>controls/armament/trigger-rocket</property>
         </volume>
         <position>
-            <x>0</x>
+            <x>-1</x>
             <y>0</y>
-            <z>1</z>
+            <z>0</z>
         </position>
         <reference-dist>10.0</reference-dist>
         <max-dist>50.0</max-dist>
-    </crash>
+    </rockets>
 
 	<!-- FLAPS & CONTROLS -->
 
