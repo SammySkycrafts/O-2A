@@ -5,7 +5,7 @@
 	<electrical>
 		<name>electrical</name>
 		<number>0</number>
-		<path>Aircraft/Cessna337/Systems/Cessna337-electrical.xml</path>
+		<path>Aircraft/O-2A/Systems/O-2A-electrical.xml</path>
 	</electrical>
 
 	<pitot>
