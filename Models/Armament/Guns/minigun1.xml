@@ -1,0 +1,16 @@
+<PropertyList>
+
+  <path>Aircraft/O-2A/Models/Armament/Guns/miniguns.ac</path>
+
+	<!--animation>
+		<type>select</type>
+		<nopreview/>
+		<object-name>miniguns</object-name>
+		<condition>   
+			<equals>
+				<property>consumables/fuel/tank[2]/selected</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation--> 
+ </PropertyList>

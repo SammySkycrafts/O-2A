@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Rocket_Pod.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tube</object-name>
+
+    <!-- Transparence -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>Rocket_Pod</object-name>
+  </effect>
+  <!-- Left -->
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m>  0.04636 </y-m>
+      <z-m>  0.08301 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m> -0.04668 </y-m>
+      <z-m>  0.08303 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m> -0.09323 </y-m>
+      <z-m>  0.00004 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m> -0.04671 </y-m>
+      <z-m> -0.08171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m>  0.04636 </y-m>
+      <z-m> -0.08172 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m>  0.09252 </y-m>
+      <z-m>  0.00002 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/rocket.xml</path>
+    <offsets>
+      <x-m> -0.16000 </x-m>
+      <y-m> -0.00018 </y-m>
+      <z-m>  0.00044 </z-m>
+    </offsets>
+  </model>
+ 
+</PropertyList>

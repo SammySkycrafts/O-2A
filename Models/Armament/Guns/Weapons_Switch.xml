@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Weapons_Switch.ac</path>
+
+  <animation>
+    <object-name>Arm_Switch</object-name>
+    <object-name>Hinge</object-name>
+    <object-name>Rivets</object-name>
+    <object-name>Screws</object-name>
+    <object-name>Switch_Cover</object-name>
+    <object-name>Switch_Nut</object-name>
+  </animation>
+
+    <animation>
+    <type>material</type>
+    <object-name>Switch_Cover</object-name>
+    <object-name>Arm_Switch</object-name>
+    <object-name>Switch_Nut</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+           <red>0.3</red>
+            <green>0.2</green>
+            <blue>0.2</blue>
+    </emission>
+  </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Switch_Cover</object-name>
+	 <property>controls/switches/Switch_Cover</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>-0.96655</x-m>
+		 <y-m>-0.03307</y-m>
+		 <z-m> 0.32027</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>Switch_Cover</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/Switch_Cover</property>
+		 </binding>
+
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Arm_Switch</object-name>
+	 <property>controls/armament/master-arm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>-0.96782</x-m>
+		 <y-m>-0.03307</y-m>
+		 <z-m> 0.32027</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>Switch_Nut</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/armament/master-arm</property>
+		 </binding>
+
+	 </action>
+</animation>
+
+</PropertyList>

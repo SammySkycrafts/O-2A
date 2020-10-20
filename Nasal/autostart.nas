@@ -52,8 +52,8 @@ var Shutdown = func{
 	setprop("controls/engines/engine[1]/master-alt",0);
 	setprop("controls/engines/engine[1]/magnetos",0);
 	setprop("controls/engines/engine[1]/primer",0);
-	setprop("controls/engines/engine[1]/mixture",1);
-	setprop("controls/engines/engine[1]/propeller-pitch",1);
+	setprop("controls/engines/engine[1]/mixture",0);
+	setprop("controls/engines/engine[1]/propeller-pitch",0);
 	setprop("controls/engines/engine[1]/cowl-flaps-norm",0);
 	setprop("/controls/anti-ice/pitot-heat",0);
 	setprop("/controls/lighting/nav-lights",0);

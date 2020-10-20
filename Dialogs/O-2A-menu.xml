@@ -6,20 +6,15 @@
 	<menu n="10">
 		<label>O-2A</label>
 		<enabled type="bool">true</enabled>
-		<item n="6">
-			<label>Combat</label>
+
+      <item n="1">
+        <label>Load Ammo</label>
         <binding>
-          <command>nasal</command>
-          <script>load.guns()</script>
+        <command>nasal</command>
+        <script>guns.load_ammo();</script>
         </binding>
-		</item>
-		<item n="7">
-			<label>Reload</label>
-        <binding>
-          <command>nasal</command>
-          <script>guns.reload_Cannon()</script>
-        </binding>
-		</item>
+      </item>
+
 		<item n="3">
 			<label>Utility</label>
 			<binding>

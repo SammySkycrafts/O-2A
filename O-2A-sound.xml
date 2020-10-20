@@ -9,7 +9,7 @@
 
 	<crank>
 		<name>engstart1</name>
-		<path>Sounds/engstart.wav</path>
+		<path>Sound/engstart.wav</path>
 		<property>engines/engine[0]/cranking</property>
 		<position>
 			<x>-1.8</x>
@@ -23,7 +23,7 @@
 	<crank>
 		<name>crank1</name>
 		<mode>looped</mode>
-		<path>Sounds/cranking.wav</path>
+		<path>Sound/cranking.wav</path>
 		<condition>
 			<property>engines/engine[0]/cranking</property>
 			<not>
@@ -41,7 +41,7 @@
 	</crank>
 	<crank>
 		<name>cough1</name>
-		<path>Sounds/coughing.wav</path>
+		<path>Sound/coughing.wav</path>
 		<property>engines/engine[0]/running</property>
 		<position>
 			<x>-1.8</x>
@@ -56,7 +56,7 @@
 	<engine>
 		<name>engine-external-1</name>
 		<mode>looped</mode>
-		<path>Aircraft/O-2A/Sounds/Engine_Continental-O200A.wav</path>
+		<path>Aircraft/O-2A/Sound/Engine_Continental-O200A.wav</path>
 		<position>
 			<x>-1.8</x>
 			<y> 0  </y>
@@ -87,7 +87,7 @@
 	<engine>
 		<name>engine-internal-1</name>
 		<mode>looped</mode>
-		<path>Aircraft/O-2A/Sounds/Engine_Continental-O200A-LPF.wav</path>
+		<path>Aircraft/O-2A/Sound/Engine_Continental-O200A-LPF.wav</path>
 		<condition>
 			<and>
 				<property>engines/engine[0]/running</property>
@@ -119,7 +119,7 @@
 
 	<crank>
 		<name>engstart2</name>
-		<path>Sounds/engstart.wav</path>
+		<path>Sound/engstart.wav</path>
 		<property>engines/engine[1]/cranking</property>
 		<position>
 			<x>2.3</x>
@@ -133,7 +133,7 @@
 	<crank>
 		<name>crank2</name>
 		<mode>looped</mode>
-		<path>Sounds/cranking.wav</path>
+		<path>Sound/cranking.wav</path>
 		<condition>
 			<property>engines/engine[1]/cranking</property>
 			<not>
@@ -151,7 +151,7 @@
 	</crank>
 	<crank>
 		<name>cough2</name>
-		<path>Sounds/coughing.wav</path>
+		<path>Sound/coughing.wav</path>
 		<property>engines/engine[1]/running</property>
 		<position>
 			<x>2.3</x>
@@ -166,7 +166,7 @@
 	<engine>
 		<name>engine-external-2</name>
 		<mode>looped</mode>
-		<path>Aircraft/O-2A/Sounds/Engine_Continental-O200A.wav</path>
+		<path>Aircraft/O-2A/Sound/Engine_Continental-O200A.wav</path>
 		<position>
 			<x>2.3</x>
 			<y>0  </y>
@@ -197,7 +197,7 @@
 	<engine>
 		<name>engine-internal-2</name>
 		<mode>looped</mode>
-		<path>Aircraft/O-2A/Sounds/Engine_Continental-O200A-LPF.wav</path>
+		<path>Aircraft/O-2A/Sound/Engine_Continental-O200A-LPF.wav</path>
 		<condition>
 			<and>
 				<property>engines/engine[1]/running</property>
@@ -225,12 +225,47 @@
 		</pitch>
 	</engine>
 
+    <guns>
+        <name>guns</name>
+        <mode>looped</mode>
+        <path>Aircraft/O-2A/Sound/minigun.wav</path>
+        <property>controls/armament/trigger-cannon</property>
+        <volume>
+            <property>controls/armament/trigger-cannon</property>
+        </volume>
+        <position>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </position>
+        <reference-dist>20.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </guns>
+
+   <!-- rockets away -->
+    <rockets>
+      <name>rockets</name>
+       <mode>once</mode>
+        <property>controls/armament/trigger-rocket</property>
+      <path>Aircraft/O-2A/Sound/rocket_away.wav</path>
+        <volume>
+            <property>controls/armament/trigger-rocket</property>
+        </volume>
+        <position>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>10.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </rockets>
+
 	<!-- FLAPS & CONTROLS -->
 
 	<flap>
 		<name>flaps</name>
 		<mode>in-transit</mode>
-		<path>Aircraft/O-2A/Sounds/Cessna150Flaps.wav</path>
+		<path>Aircraft/O-2A/Sound/Cessna150Flaps.wav</path>
 		<property>surface-positions/flap-pos-norm</property>
 		<volume>
 			<factor>0.8</factor>
@@ -241,7 +276,7 @@
 
 	<rudder>
 		<name>Rudder pedals noise L</name>
-		<path>Aircraft/O-2A/Sounds/RudderPedalNoise.wav</path>
+		<path>Aircraft/O-2A/Sound/RudderPedalNoise.wav</path>
 		<condition>
 			<less-than>
 				<property>controls/flight/rudder</property>
@@ -255,7 +290,7 @@
 
 	<rudder>
 		<name>Rudder pedals noise R</name>
-		<path>Aircraft/O-2A/Sounds/RudderPedalNoise.wav</path>
+		<path>Aircraft/O-2A/Sound/RudderPedalNoise.wav</path>
 		<condition>
 			<greater-than>
 				<property>controls/flight/rudder</property>
@@ -271,7 +306,7 @@
 
 	<door>
 		<name>Door Open</name>
-		<path>Aircraft/O-2A/Sounds/DoorOpen.wav</path>
+		<path>Aircraft/O-2A/Sound/DoorOpen.wav</path>
 		<condition>
 			<greater-than>
 				<property>controls/door</property>
@@ -284,7 +319,7 @@
 	</door>
 	<door>
 		<name>Door Close</name>
-		<path>Aircraft/O-2A/Sounds/DoorClosed.wav</path>
+		<path>Aircraft/O-2A/Sound/DoorClosed.wav</path>
 		<condition>
 			<equals>
 				<property>controls/door</property>
@@ -301,7 +336,7 @@
 	<rumble>
 		<name>Rumble</name>
 		<mode>looped</mode>
-		<path>Sounds/rumble.wav</path>
+		<path>Sound/rumble.wav</path>
 		<condition>
 			<or>
 				<property>gear/gear[0]/wow</property>
@@ -318,7 +353,7 @@
 
 	<squeal>
 		<name>Squeal</name>
-		<path>Aircraft/O-2A/Sounds/Squeal.wav</path>
+		<path>Aircraft/O-2A/Sound/Squeal.wav</path>
 		<condition>
 			<or>
 				<property>gear/gear[0]/wow</property>
@@ -348,7 +383,7 @@
 	<crash>
 		<name>Intense ground contact</name>
 		<mode>once</mode>
-		<path>Sounds/crash.wav</path>
+		<path>Sound/crash.wav</path>
 		<property>sim/crashed</property>
 		<volume>
 			<factor>1</factor>
@@ -363,7 +398,7 @@
 	<stall>
 		<name>stall</name>
 		<mode>looped</mode>
-		<path>Aircraft/O-2A/Sounds/Stall.wav</path>
+		<path>Aircraft/O-2A/Sound/Stall.wav</path>
 		<condition>
 			<and>
 				<or>
@@ -392,7 +427,7 @@
 	<gear-warn>
 		<name>gear warning</name>
 		<mode>looped</mode>
-		<path>Sounds/gear-hrn.wav</path>
+		<path>Sound/gear-hrn.wav</path>
 		<condition>
 			<or>
 				<and>
@@ -450,7 +485,7 @@
         <gear>
             <name>gear</name>
             <mode>in-transit</mode>
-            <path>Sounds/gear.wav</path>
+            <path>Sound/gear.wav</path>
             <property>gear/gear[0]/position-norm</property>
             <pitch>
                 <internal>dt_play</internal>
@@ -462,7 +497,7 @@
         </gear>
         <gear>
             <name>gear-lock</name>
-            <path>Sounds/gear-lck.wav</path>
+            <path>Sound/gear-lck.wav</path>
             <condition>
                 <equals>
                     <property>gear/gear[0]/position-norm</property>
@@ -476,7 +511,7 @@
 	<wind>
 		<name>wind</name>
 		<mode>looped</mode>
-		<path>Sounds/wind.wav</path>
+		<path>Sound/wind.wav</path>
 		<property>velocities/airspeed-kt</property>
 		<volume>
 			<property>position/altitude-ft</property>
@@ -504,7 +539,7 @@
 
 	<click> 
 		<name>Battery ON (switch)</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<property>controls/engines/engine/master-bat</property>
 		</condition>
@@ -514,7 +549,7 @@
 	</click>
 	<click> 
 		<name>Battery ON (noise)</name>
-		<path>Aircraft/O-2A/Sounds/BatteryStart.wav</path>
+		<path>Aircraft/O-2A/Sound/BatteryStart.wav</path>
 		<condition> 
 			<property>controls/engines/engine/master-bat</property>
 		</condition>
@@ -524,7 +559,7 @@
 	</click>
 	<click> 
 		<name>Battery OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<not> 
 				<property>controls/engines/engine/master-bat</property>
@@ -539,7 +574,7 @@
 
  	<click> 
 		<name>Front Alt ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<property>controls/engines/engine[0]/master-alt</property>
 		</condition>
@@ -549,7 +584,7 @@
 	</click>
 	<click> 
 		<name>Front Alt OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<not> 
 				<property>controls/engines/engine[0]/master-alt</property>
@@ -562,7 +597,7 @@
 
  	<click>
 		<name>Rear Alt ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition>
 			<property>controls/engines/engine[1]/master-alt</property>
 		</condition>
@@ -572,7 +607,7 @@
 	</click>
 	<click>
 		<name>Rear Alt OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition>
 			<not>
 				<property>controls/engines/engine[1]/master-alt</property>
@@ -587,7 +622,7 @@
 
  	<click> 
 		<name>Front Fuel Pump LO ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<property>/controls/engines/engine[0]/fuel-pump</property>
 		</condition>
@@ -597,7 +632,7 @@
 	</click>
 	<click> 
 		<name>Front Alt OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<not> 
 				<property>/controls/engines/engine[0]/fuel-pump</property>
@@ -610,7 +645,7 @@
 
  	<click> 
 		<name>Rear Fuel Pump LO ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<property>/controls/engines/engine[1]/fuel-pump</property>
 		</condition>
@@ -620,7 +655,7 @@
 	</click>
 	<click> 
 		<name>Rear Alt OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<not> 
 				<property>/controls/engines/engine[1]/fuel-pump</property>
@@ -635,7 +670,7 @@
 
  	<click> 
 		<name>Avionics ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<property>controls/switches/master-avionics</property>
 		</condition>
@@ -645,7 +680,7 @@
 	</click>
 	<click> 
 		<name>Avionics OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonPower.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonPower.wav</path>
 		<condition> 
 			<not> 
 				<property>controls/switches/master-avionics</property>
@@ -660,7 +695,7 @@
 
  	<click>
 		<name>Pitot Heat ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>/controls/anti-ice/pitot-heat</property>
 		</condition>
@@ -670,7 +705,7 @@
 	</click>
 	<click>
 		<name>Pitot Heat OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>/controls/anti-ice/pitot-heat</property>
@@ -685,7 +720,7 @@
 
  	<click>
 		<name>Window Heat ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>/controls/anti-ice/window-heat</property>
 		</condition>
@@ -695,7 +730,7 @@
 	</click>
 	<click>
 		<name>Window Heat OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>/controls/anti-ice/window-heat</property>
@@ -710,7 +745,7 @@
 
  	<click>
 		<name>Nav Lights ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/nav-lights</property>
 		</condition>
@@ -720,7 +755,7 @@
 	</click>
 	<click>
 		<name>Nav Lights OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/nav-lights</property>
@@ -735,7 +770,7 @@
 
  	<click>
 		<name>Strobe Lights ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/strobe</property>
 		</condition>
@@ -745,7 +780,7 @@
 	</click>
 	<click>
 		<name>Strobe Lights OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/strobe</property>
@@ -760,7 +795,7 @@
 
  	<click>
 		<name>Beacon Light ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/beacon</property>
 		</condition>
@@ -770,7 +805,7 @@
 	</click>
 	<click>
 		<name>Beacon Light OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/beacon</property>
@@ -785,7 +820,7 @@
 
  	<click>
 		<name>Beacon Light ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/taxi-light</property>
 		</condition>
@@ -795,7 +830,7 @@
 	</click>
 	<click>
 		<name>Beacon Light OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/taxi-light</property>
@@ -810,7 +845,7 @@
 
  	<click>
 		<name>Beacon Light ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/landing-lights</property>
 		</condition>
@@ -820,7 +855,7 @@
 	</click>
 	<click>
 		<name>Beacon Light OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonLights.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/landing-lights</property>
@@ -837,7 +872,7 @@
 
  	<click>
 		<name>ADF Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>/instrumentation/adf[0]/adf-btn</property>
 		</condition>
@@ -847,7 +882,7 @@
 	</click>
 	<click>
 		<name>ADF Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<not>
 				<property>/instrumentation/adf[0]/adf-btn</property>
@@ -860,7 +895,7 @@
 
  	<click>
 		<name>BFO Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>/instrumentation/adf[0]/bfo-btn</property>
 		</condition>
@@ -870,7 +905,7 @@
 	</click>
 	<click>
 		<name>BFO Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<not>
 				<property>/instrumentation/adf[0]/bfo-btn</property>
@@ -883,7 +918,7 @@
 
  	<click>
 		<name>FRQ Btn</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>/instrumentation/adf[0]/frq-btn</property>
 		</condition>
@@ -894,7 +929,7 @@
 
  	<click>
 		<name>FLT Btn</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>/instrumentation/adf[0]/flt-btn</property>
 		</condition>
@@ -905,7 +940,7 @@
 
  	<click>
 		<name>SET Btn</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>/instrumentation/adf[0]/set-btn</property>
 		</condition>
@@ -918,7 +953,7 @@
 
  	<click>
 		<name>TEST Btn</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/kma24/test</property>
 		</condition>
@@ -929,7 +964,7 @@
 
  	<click>
 		<name>SENS Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/kma24/sens</property>
 		</condition>
@@ -939,7 +974,7 @@
 	</click>
 	<click>
 		<name>SENS Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<not>
 				<property>instrumentation/kma24/sens</property>
@@ -952,7 +987,7 @@
 
  	<click>
 		<name>TEL Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/tel</property>
@@ -965,7 +1000,7 @@
 	</click>
 	<click>
 		<name>TEL Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/tel</property>
@@ -978,7 +1013,7 @@
 	</click>
 	<click>
 		<name>TEL Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/tel</property>
@@ -992,7 +1027,7 @@
 
  	<click>
 		<name>COM1 Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com1</property>
@@ -1005,7 +1040,7 @@
 	</click>
 	<click>
 		<name>COM1 Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com1</property>
@@ -1018,7 +1053,7 @@
 	</click>
 	<click>
 		<name>COM1 Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com1</property>
@@ -1032,7 +1067,7 @@
 
  	<click>
 		<name>COM2 Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com2</property>
@@ -1045,7 +1080,7 @@
 	</click>
 	<click>
 		<name>COM2 Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com2</property>
@@ -1058,7 +1093,7 @@
 	</click>
 	<click>
 		<name>COM2 Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/com2</property>
@@ -1072,7 +1107,7 @@
 
  	<click>
 		<name>NAV1 Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav1</property>
@@ -1085,7 +1120,7 @@
 	</click>
 	<click>
 		<name>NAV1 Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav1</property>
@@ -1098,7 +1133,7 @@
 	</click>
 	<click>
 		<name>NAV1 Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav1</property>
@@ -1112,7 +1147,7 @@
 
  	<click>
 		<name>NAV2 Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav2</property>
@@ -1125,7 +1160,7 @@
 	</click>
 	<click>
 		<name>NAV2 Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav2</property>
@@ -1138,7 +1173,7 @@
 	</click>
 	<click>
 		<name>NAV2 Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/nav2</property>
@@ -1152,7 +1187,7 @@
 
  	<click>
 		<name>ADF Audio Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/adf</property>
@@ -1165,7 +1200,7 @@
 	</click>
 	<click>
 		<name>ADF Audio Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/adf</property>
@@ -1178,7 +1213,7 @@
 	</click>
 	<click>
 		<name>ADF Audio Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/adf</property>
@@ -1192,7 +1227,7 @@
 
  	<click>
 		<name>DME Audio Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/dme</property>
@@ -1205,7 +1240,7 @@
 	</click>
 	<click>
 		<name>DME Audio Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/dme</property>
@@ -1218,7 +1253,7 @@
 	</click>
 	<click>
 		<name>DME Audio Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/dme</property>
@@ -1232,7 +1267,7 @@
 
  	<click>
 		<name>MKR Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/mkr</property>
@@ -1245,7 +1280,7 @@
 	</click>
 	<click>
 		<name>MKR Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/mkr</property>
@@ -1258,7 +1293,7 @@
 	</click>
 	<click>
 		<name>MKR Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/mkr</property>
@@ -1272,7 +1307,7 @@
 
  	<click>
 		<name>AUTO Btn ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/auto</property>
@@ -1285,7 +1320,7 @@
 	</click>
 	<click>
 		<name>AUTO Btn ZERO</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/auto</property>
@@ -1298,7 +1333,7 @@
 	</click>
 	<click>
 		<name>AUTO Btn OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<equals>
 				<property>instrumentation/kma24/auto</property>
@@ -1314,7 +1349,7 @@
 
  	<click>
 		<name>DME ON</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/dme[0]/power-btn</property>
 		</condition>
@@ -1324,7 +1359,7 @@
 	</click>
 	<click>
 		<name>DME OFF</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<not>
 				<property>instrumentation/dme[0]/power-btn</property>
@@ -1339,7 +1374,7 @@
 
  	<click>
 		<name>COMM 1 FREQ</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/comm[0]/frq-swap-btn</property>
 		</condition>
@@ -1350,7 +1385,7 @@
 
  	<click>
 		<name>NAV 1 FREQ</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/nav[0]/frq-swap-btn</property>
 		</condition>
@@ -1363,7 +1398,7 @@
 
  	<click>
 		<name>COMM 2 FREQ</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/comm[1]/frq-swap-btn</property>
 		</condition>
@@ -1374,7 +1409,7 @@
 
  	<click>
 		<name>NAV 2 FREQ</name>
-		<path>Aircraft/O-2A/Sounds/ButtonRadio.wav</path>
+		<path>Aircraft/O-2A/Sound/ButtonRadio.wav</path>
 		<condition>
 			<property>instrumentation/nav[1]/frq-swap-btn</property>
 		</condition>
@@ -1385,7 +1420,7 @@
 
  	<click>
 		<name>Hammer</name>
-		<path>Aircraft/O-2A/Sounds/Colt.wav</path>
+		<path>Aircraft/O-2A/Sound/Colt.wav</path>
 		<condition>
 		  <property>controls/armament/guns</property>
 		</condition>
@@ -1397,7 +1432,7 @@
   <music>
     <name>Psyops</name>
     <mode>looped</mode>
-    <path>Aircraft/O-2A/Sounds/tonnerre.wav</path>
+    <path>Aircraft/O-2A/Sound/tonnerre.wav</path>
      <condition>
      		<and>
 		     <greater-than>
@@ -1414,6 +1449,130 @@
 		    <offset>0.3</offset>
 		  </volume>
     </music>
+        <aircraft-explode>
+            <name>aircraft-explode</name>
+            <path>Aircraft/O-2A/Sound/aircraft-explode.wav</path>
+            <mode>once</mode>
+            <condition>
+                <equals>
+                    <property>damage/Sound/explode-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <factor>3</factor>
+                <max>3</max>
+            </volume>
+        </aircraft-explode>
+
+        <aircraft-detach>
+            <name>aircraft-detach</name>
+            <path>Aircraft/O-2A/Sound/aircraft-wings-detach.wav</path>
+            <mode>once</mode>
+            <condition>
+                <equals>
+                    <property>damage/Sound/detach-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <factor>1</factor>
+            </volume>
+        </aircraft-detach>
+
+        <aircraft-crash>
+            <name>aircraft-impact</name>
+            <path>Aircraft/O-2A/Sound/aircraft-crash.wav</path>
+            <mode>once</mode>
+            <condition>
+                <equals>
+                    <property>damage/Sound/crash-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <factor>1</factor>
+            </volume>
+        </aircraft-crash>
+
+        <aircraft-water-crash>
+            <name>aircraft-water-crash</name>
+            <path>Aircraft/O-2A/Sound/aircraft-water-crash.wav</path>
+            <mode>once</mode>
+            <condition>
+                <equals>
+                    <property>damage/Sound/water-crash-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <factor>1</factor>
+            </volume>
+        </aircraft-water-crash>
+
+        <aircraft-crack>
+            <name>aircraft-crack</name>
+            <path>Aircraft/O-2A/Sound/aircraft-crack.wav</path>
+            <mode>once</mode>
+            <condition>
+                <property>sim/current-view/internal</property>
+                <equals>
+                    <property>damage/Sound/crack-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <property>damage/Sound/crack-volume</property>
+                <factor>1</factor>
+            </volume>
+        </aircraft-crack>
+
+        <aircraft-creaking>
+            <name>aircraft-creaking</name>
+            <path>Aircraft/O-2A/Sound/aircraft-creaking.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <property>sim/current-view/internal</property>
+                <equals>
+                    <property>damage/Sound/creaking-on</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <position>
+                <x>0.01</x>
+                <y>0.01</y>
+                <z>0.01</z>
+            </position>
+            <volume>
+                <property>damage/Sound/creaking-volume</property>
+                <factor>1</factor>
+            </volume>
+        </aircraft-creaking>
 
 </fx>
 </PropertyList>

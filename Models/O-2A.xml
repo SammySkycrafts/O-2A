@@ -48,42 +48,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	</offsets>
 </model>
 
-<!--model>
-	<path>Aircraft/O-2A/Models/O-2A_seat-pilot.xml</path>
-	<offsets>
-		<x-m> 0.440 </x-m>
-		<y-m>-0.280 </y-m>
-		<z-m>-0.272 </z-m>
-	</offsets>
-</model>
-
-<model>
-	<path>Aircraft/O-2A/Models/O-2A_seat-pilot.xml</path>
-	<offsets>
-		<x-m> 0.440 </x-m>
-		<y-m> 0.280 </y-m>
-		<z-m>-0.272 </z-m>
-	</offsets>
-</model>
-
-<model>
-	<path>Aircraft/O-2A/Models/O-2A_seat-pilot.xml</path>
-	<offsets>
-		<x-m> 1.170 </x-m>
-		<y-m>-0.270 </y-m>
-		<z-m>-0.272 </z-m>
-	</offsets>
-</model>
-
-<model>
-	<path>Aircraft/O-2A/Models/O-2A_seat-pilot.xml</path>
-	<offsets>
-		<x-m> 1.170 </x-m>
-		<y-m> 0.270 </y-m>
-		<z-m>-0.272 </z-m>
-	</offsets>
-</model-->
-
 	<!-- LIVERY SETTINGS -->
 
 <nasal>
@@ -154,7 +118,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
 <animation>
 	<type>material</type>
-		<object-name>Dome Head</object-name>
 		<object-name>Adj_Lever</object-name>
 		<object-name>BaseSwitch_19</object-name>
 		<object-name>BaseSwitch_20</object-name>
@@ -165,7 +128,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<object-name>Clamp.002</object-name>
 		<object-name>Dimmer</object-name>
 		<object-name>Dimmer_Panel</object-name>
-		<object-name>Dome Head.1</object-name>
 		<object-name>Fuel_Base</object-name>
 		<object-name>Fuses</object-name>
 		<object-name>Glass</object-name>
@@ -176,6 +138,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<object-name>PalancaFlaps_02</object-name>
 		<object-name>PalancaTren_01</object-name>
         <object-name>PalancaTren_02</object-name>
+        <object-name>Pedestal_02</object-name>
 		<object-name>Perilla_01</object-name>
         <object-name>Perilla_02</object-name>
 		<object-name>Perilla_04</object-name>
@@ -216,45 +179,224 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<object-name>cam-cover</object-name>
 		<object-name>cam-switch</object-name>
 		<object-name>cam-switch.001</object-name>
+      
         <emission>
-            <red>0.02</red>
-            <green>0.02</green>
-            <blue>0.02</blue>
+            <red>0.2</red>
+            <green>0.05</green>
+            <blue>0.05</blue>
             <factor-prop>controls/lighting/panel-norm</factor-prop> 
         </emission>
     </animation>
 
-	<!-- LIVERY OPTIONS -->
+  <model>
+  <path>Aircraft/O-2A/Models/payload/loads.xml</path>
+  <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model> 
 
-	<!-- videoCam ON/OFF -->
+  <model>
+        <path>Aircraft/O-2A/Models/Armament/Guns/gunsight.xml</path>
+        <name>gunsmoke1</name>
+        <offsets>
+            <x-m> 0.0000</x-m>
+            <y-m> 0.0300 </y-m>
+            <z-m> 0.0000</z-m>
+        </offsets>
+    </model>
 
-<animation>
-	<type>select</type>
-	<object-name>VideoCam_03</object-name>
-	<condition>
-		<property>sim/model/videocam</property>
-	</condition>
-</animation>
+  <model>
+        <path>Aircraft/O-2A/Models/Armament/Guns/Weapons_Switch.xml</path>
+        <name>gunsmoke1</name>
+        <offsets>
+            <x-m> 0.0000</x-m>
+            <y-m> 0.0000 </y-m>
+            <z-m> 0.0000</z-m>
+        </offsets>
+    </model>
 
-	<!-- comm device ON/OFF -->
+  <model>
+        <path>Aircraft/O-2A/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke1</name>
+        <offsets>
+            <x-m>-0.14172</x-m>
+            <y-m>-2.24340 </y-m>
+            <z-m> 0.15145</z-m>
+        </offsets>
+    </model>
 
-<animation>
-	<type>select</type>
-	<object-name>Dispositivo</object-name>
-	<condition>
-		<property>sim/model/device</property>
-	</condition>
-</animation>
+   <model>
+        <path>Aircraft/O-2A/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke2</name>
+        <offsets>
+            <x-m>-0.14172</x-m>
+            <y-m> 2.22731 </y-m>
+            <z-m> 0.15145</z-m>
+        </offsets>
+    </model>
 
-	<!-- Front propeller cone ON/OFF -->
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/Rockets.xml</path>
+        <name>Rocket_Left</name>
+		<offsets>
+			<x-m> 0.7000 </x-m>
+            <y-m>-3.0000 </y-m>
+            <z-m> 0.1900 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model>
 
-<!--SUBMODELS-->
-<submodels>
-<serviceable type="bool">true</serviceable>
-<path>Aircraft/O-2A/Armament/guns/O-2Asubmodels.xml</path>
-<path>Aircraft/O-2A/Armament/rockets/submodels.xml</path>
- <path>Aircraft/O-2A/Armament/payload/loads.xml</path>
-</submodels>
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/Rockets.xml</path>
+        <name>Rocket_Right</name>
+        <offsets>
+            <x-m> 0.7000</x-m>
+            <y-m> 3.0000 </y-m>
+            <z-m> 0.1900</z-m>
+        </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.700 </x-m>
+      <y-m>  3.250 </y-m>
+      <z-m>  0.300 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/weapons/wp_rocket.xml</path>
+    <offsets>
+      <x-m>  0.700 </x-m>
+      <y-m> -3.250 </y-m>
+      <z-m>  0.300 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/Armament/Pylons/pylons.ac</path>
+        <name>pylons</name>
+		<offsets>
+			<x-m>0.0000</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>0.0000</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/Armament/Guns/miniguns.ac</path>
+        <name>minigun-stbd</name>
+		<offsets>
+			<x-m>0.5000</x-m>
+            <y-m>2.2200</y-m>
+            <z-m>0.1350</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/Armament/Guns/miniguns.ac</path>
+        <name>minigun-port</name>
+		<offsets>
+			<x-m> 0.5000</x-m>
+            <y-m>-2.2500</y-m>
+            <z-m> 0.1350</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model>
+
+  <!--model>
+    <path>Aircraft/O-2A/Models/Effects/guns/tracer.xml</path>
+        <name>minigun-stbd</name>
+		<offsets>
+			<x-m>0.5000</x-m>
+            <y-m>2.2200</y-m>
+            <z-m>0.1350</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/O-2A/Models/Effects/guns/tracer.xml</path>
+        <name>minigun-port</name>
+		<offsets>
+			<x-m> 0.5000</x-m>
+            <y-m>-2.2500</y-m>
+            <z-m> 0.1350</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+  </model-->
+
+   <model>
+        <path>Aircraft/O-2A/Models/Effects/gunflame.xml</path>
+        <name>gunflame1</name>
+        <offsets>
+            <x-m>-0.2400</x-m>
+            <y-m>-2.2500 </y-m>
+            <z-m> 0.1400</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/O-2A/Models/Effects/gunflame.xml</path>
+        <name>gunflame5</name>
+        <offsets>
+            <x-m>-0.2400</x-m>
+            <y-m> 2.2200</y-m>
+            <z-m> 0.1400</z-m>
+        </offsets>
+    </model>
+
+  <model>
+        <path>Aircraft/O-2A/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke1</name>
+        <offsets>
+            <x-m> 0.7000</x-m>
+            <y-m>-2.5000 </y-m>
+            <z-m>-0.0000</z-m>
+        </offsets>
+    </model>
+
+   <model>
+        <path>Aircraft/O-2A/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke2</name>
+        <offsets>
+            <x-m> 0.7000</x-m>
+            <y-m> 2.2000 </y-m>
+            <z-m>-0.0000</z-m>
+        </offsets>
+    </model>
+
+  <model>
+        <path>Aircraft/O-2A/Models/Effects/Rocket/smoke.xml</path>
+        <name>R-smoke1</name>
+        <offsets>
+            <x-m> 0.0000</x-m>
+            <y-m>-3.0000 </y-m>
+            <z-m>-0.0000</z-m>
+        </offsets>
+    </model>
+
+   <model>
+        <path>Aircraft/O-2A/Models/Effects/Rocket/smoke.xml</path>
+        <name>R-smoke2</name>
+        <offsets>
+            <x-m> 0.0000</x-m>
+            <y-m> 3.0000 </y-m>
+            <z-m>-0.0000</z-m>
+        </offsets>
+    </model>
+
 
 	<!-- wing fins ON/OFF -->
 
