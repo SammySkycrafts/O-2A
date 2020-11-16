@@ -5,9 +5,8 @@
   <path>rocket.ac</path>
   
   <animation>
-
     <object-name>rocket</object-name>
-
+ </animation>
   <!-- Smoke -->
   <model>
     <path>Aircraft/O-2A/Models/Effects/Rocket/smoke.xml</path>
