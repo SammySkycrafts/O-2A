@@ -6,7 +6,7 @@
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>tube</object-name>
+    <!--<object-name>tube</object-name> -->
 
     <!-- Transparence -->
   </animation>
