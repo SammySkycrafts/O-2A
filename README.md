@@ -1,4 +1,3 @@
-
 The Cessna O-2 Skymaster (nicknamed "Oscar Deuce") is a military version of the Cessna 337 Super Skymaster, used for forward air control (FAC) and psychological operations (PSYOPS) by the US military between 1967 and 2010.
 
 In 1966 the United States Air Force (USAF) commissioned Cessna to build a military variant of the Skymaster to replace the O-1 Bird Dog.
@@ -11,7 +10,9 @@ The first O-2 flew in January 1967 and the plane went into production shortly th
 
 U.S. Air Force
 
-O-2B Skymaster dropping leaflets over Vietnam
+[O-2B Skymaster dropping leaflets over Vietnam](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/O-2_Skymaster.jpg/2560px-O-2_Skymaster.jpg)
+
+
 The USAF took delivery of the O-2 Skymaster in March 1967 and the O-2A also entered the U.S. Army's inventory during 1967, from USAF stock. By 1970, a total of 532 O-2s had been built, in two variants, for the USAF.
 
 During the Vietnam War, the O-2A was introduced as a replacement for the O-1 Bird Dog, in the forward air control (FAC) aircraft and served in that role with the 20th Tactical Air Support Squadron. The O-2B was equipped with loudspeakers and a leaflet dispenser for use in the psychological operations (PSYOPS) role.
