@@ -3,7 +3,7 @@
 <PropertyList>
 
 <sim>
-	<author>NC-687</author>
+	<author>NC-687, Zorka</author>
 	<description>O-2A</description>
 	<aircraft-version>V20200808</aircraft-version>
 	<rating>
@@ -303,6 +303,8 @@
 		<file>Aircraft/O-2A/Nasal/liveries.nas</file>
 		<file>Aircraft/O-2A/Nasal/dialogs.nas</file>
 		<file>Aircraft/O-2A/Nasal/autostart.nas</file>
+		<file>Aircraft/O-2A/Nasal/GeoBridgedTransmitter.nas</file>
+		<file>Aircraft/O-2A/Nasal/ArmamentNotification.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/DME/KN62A.nas</file>
         <file>Aircraft/O-2A/Nasal/O-2A.nas</file>
