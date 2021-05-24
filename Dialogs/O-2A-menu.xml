@@ -36,6 +36,13 @@
 				<property>sim/yokes-visible</property>
 			</binding>
 		</item>
+		<item n="6">
+			<label>Event Log</label>
+			<binding>
+				<command>dialog-show</command>
+				<dialog-name>Event Log</dialog-name>
+			</binding>
+		</item>
 		<!--item n="5">
 			<label>Select Livery</label>
 			<binding>
