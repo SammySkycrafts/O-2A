@@ -165,6 +165,7 @@
 	
 	<menubar include="Dialogs/O-2A-menu.xml"/>
 	<help include="Dialogs/O-2A-help.xml"/>
+	
 
 <!--SUBMODELS-->
 
@@ -182,6 +183,80 @@
 	<instrumentation>
 		<path>Aircraft/O-2A/Systems/O-2A-instrumentation.xml</path>
 	</instrumentation>
+
+	<menubar>
+			<default>
+				<menu n="10">
+					<label>O-2A</label>
+					<enabled type="bool">true</enabled>
+					<!-- <item>
+					  <label>Select Livery</label>
+					  <binding>
+						<command>nasal</command>
+						<script>aircraft.livery.dialog.open();</script>
+					  </binding>
+					</item>
+					<item>
+						<label>Reload chaff/flare</label>
+						<condition>
+							<and>
+								<not-equals>
+									<property>/gear/gear[0]/wow</property>
+									<value>0</value>
+								</not-equals>
+								<less-than>
+									<property>/valocities/groundspeed-kt</property>
+									<value>1</value>
+								</less-than>
+							</and>
+						</condition>
+						<binding>
+							<command>nasal</command>
+							<script>
+								<![CDATA[
+
+								if(getprop("/gear/gear[0]/wow") and getprop("/velocities/groundspeed-kt") <= 1.0){
+									setprop("/ai/submodels/submodel[78]/count", 120);
+									screen.log.write("120 flares loaded", 1, 1, 1);
+								} else {
+									screen.log.write("Can't load flares while airborne or moveing", 1, 1, 1);
+								}
+								]]>
+							</script>
+						</binding>
+					</item> -->
+					<item>
+					    <label>Toggle Damage</label>
+					    <binding>
+						<command>nasal</command>
+						<script>
+						    <![CDATA[
+						    if (getprop("/gear/gear[0]/wow") and getprop("/velocities/groundspeed-kt") <= 1.0){
+						        setprop("/payload/armament/msg/", 1 - getprop("/payload/armament/msg/"));
+						        if (getprop("/payload/armament/msg/")) {
+						            screen.log.write("Damage ON", 1, 0, 0);
+						        } else {
+						            screen.log.write("Damage OFF", 1, 0, 0);
+						        }
+						    } else {
+						        screen.log.write("Can't do that while airborne or moving", 1, 1, 1);
+						    }
+						    ]]>
+						</script>
+					    </binding>
+					</item>
+					<item>
+					    <label>IFF/DLINK Settings</label>
+					    <binding>
+							<command>dialog-show</command>
+							<dialog-name>iff</dialog-name>
+					    </binding>
+			    	</item>
+				</menu>
+			</default>
+		</menubar>
+
+
 </sim>
 
 <autopilot>
@@ -265,13 +340,17 @@
 		<landing-lights alias="/sim/rendering/als-secondary-lights/use-landing-light"/>
 		<taxi-light alias="/sim/rendering/als-secondary-lights/use-alt-landing-light"/>
 	</lighting>
-<armament>
+	<armament>
         <trigger-cannon alias="/controls/armament/trigger"/>
         <trigger-rocket type="bool">false</trigger-rocket>
         <trigger type="bool">false</trigger>
-           <guns type="bool">0</guns>
-            <ammo type="double">0</ammo><!--425 rounds per gun-->
-        </armament>
+            <guns type="bool">0</guns>
+        	<ammo type="double">0</ammo><!--425 rounds per gun-->
+		<models type="string">Aircraft/A-10/Models/MParmaments/</models>
+		<msg type="bool">true</msg>
+		<MLW-count type="int">0</MLW-count>
+	</armament>
+
 </controls>
 
 <O-2A>
@@ -305,6 +384,8 @@
 		<file>Aircraft/O-2A/Nasal/autostart.nas</file>
 		<file>Aircraft/O-2A/Nasal/GeoBridgedTransmitter.nas</file>
 		<file>Aircraft/O-2A/Nasal/ArmamentNotification.nas</file>
+		<file>Aircraft/O-2A/Nasal/iff.nas</file>
+		<file>Aircraft/O-2A/Nasal/datalink.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/O-2A/Models/Instruments/DME/KN62A.nas</file>
         <file>Aircraft/O-2A/Nasal/O-2A.nas</file>
@@ -371,6 +452,13 @@
             <knob-mode type="int">0</knob-mode>
         </inputs>
     </transponder>
+	<datalink>
+	        <channel type="int">42</channel>
+	        <power_prop type="string">controls/electric/engine[0]/generator</power_prop>
+	        <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+	        <receive_period type="double">1</receive_period>
+	        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
+    </datalink>
 </instrumentation>
 
 	<!-- configuracion teclado -->
@@ -505,7 +593,7 @@
 		<models type="string">Aircraft/O-2A/Models/mparms/</models>
 		<msg type="bool">true</msg>
 		<MLW-count type="int">0</MLW-count>
-	    </armament>
+	</armament>
 </payload>
 
 <fdm>
