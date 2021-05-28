@@ -23,6 +23,7 @@ var dlg = {
 	utility: gui.Dialog.new("/sim/gui/dialogs/O-2A/utility/dialog","Aircraft/O-2A/Dialogs/O-2A-utility.xml"),
 	autopilot: gui.Dialog.new("/sim/gui/dialogs/O-2A/autopilot/dialog","Aircraft/O-2A/Dialogs/Navomatic400A-autopilot.xml")
 	Event Log: gui.Dialog.new("/sim/gui/dialogs/O-2A/autopilot/dialog","Aircraft/O-2A/Dialogs/event-log.xml")
+	iff: gui.Dialog.new("/sim/gui/dialogs/O-2A/autopilot/dialog","Aircraft/O-2A/Dialogs/iff.xml")
 	};
 fgcommand("loadxml", props.Node.new({filename: "Aircraft/O-2A/Dialogs/O-2A-checklists-text.xml", targetnode: "/sim/gui/dialogs/O-2A/checklists-list"}));
 	
