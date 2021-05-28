@@ -4,7 +4,7 @@
 
 <sim>
 	<author>NC-687, Zorka</author>
-	<description>O-2A</description>
+	<description>O-2A Skymaster</description>
 	<aircraft-version>V20200808</aircraft-version>
 	<rating>
 		<FDM type="int">3</FDM>
