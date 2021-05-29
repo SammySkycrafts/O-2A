@@ -33,20 +33,20 @@
 	</group>
 
 	<hrule/>
-	
+
 	<nasal>
         <open>
             <![CDATA[
-                setprop("sim/model/mirage2000/event-log", "Click refresh to see the combat event log..");
+                setprop("/sim/gui/dialogs/O-2A/flightlog/dialog", "Click refresh to see the combat event log..");
             ]]>
         </open>
         <close>
         	<![CDATA[
-                setprop("sim/model/mirage2000/event-log", "");
+                setprop("s/sim/gui/dialogs/O-2A/flightlog/dialog", "");
             ]]>
         </close>
     </nasal>
-	
+
 	<button>
 		<!--<x>0</x>
 		<y>0</y>-->
@@ -58,14 +58,14 @@
 				var str = "";
 				if (getprop("velocities/groundspeed-kt") < 10) {
 				  var buffer = damage.damageLog.get_buffer();
-				  
+
 				  foreach(entry; buffer) {
 				      str = str~""~entry.time~" "~entry.message~"\n";
 				  }
 				} else {
 					str = "The aircraft must be still to read the combat event log.";
 				}
-				setprop("sim/model/mirage2000/event-log", str);
+				setprop("/sim/gui/dialogs/O-2A/flightlog/dialog", str);
 			]]></script>
 		</binding>
 	</button>
@@ -84,7 +84,7 @@
 	    <pref-width>500</pref-width>
 		<pref-height>500</pref-height>
 
-	    <property>/sim/model/mirage2000/event-log</property>
+	    <property>/sim/gui/dialogs/O-2A/flightlog/dialog</property>
 		<live>true</live>
 	    <slider>15</slider> <!--width for slider -->
 	    <wrap>false</wrap> <!-- don't wrap text; default: true -->
@@ -93,5 +93,5 @@
 	</textbox>
 
 	<empty><stretch>1</stretch></empty>
-	
+
 </PropertyList>

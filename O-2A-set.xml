@@ -15,7 +15,7 @@
 	<status>early-production</status>
 	<flight-model>jsb</flight-model>
 	<aero>O-2A-JSBSim</aero>
-        
+
 	<model>
 		<path archive="y">Aircraft/O-2A/Models/O-2A.xml</path>
 	</model>
@@ -42,7 +42,7 @@
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</left>
 				<right>
-					<heading-max-deg type="double">165</heading-max-deg> 
+					<heading-max-deg type="double">165</heading-max-deg>
 					<x-offset-max-m type="double">0.15</x-offset-max-m>
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</right>
@@ -69,7 +69,7 @@
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</left>
 				<right>
-					<heading-max-deg type="double">165</heading-max-deg> 
+					<heading-max-deg type="double">165</heading-max-deg>
 					<x-offset-max-m type="double">0.15</x-offset-max-m>
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</right>
@@ -96,7 +96,7 @@
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</left>
 				<right>
-					<heading-max-deg type="double">165</heading-max-deg> 
+					<heading-max-deg type="double">165</heading-max-deg>
 					<x-offset-max-m type="double">0.15</x-offset-max-m>
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</right>
@@ -123,7 +123,7 @@
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</left>
 				<right>
-					<heading-max-deg type="double">165</heading-max-deg> 
+					<heading-max-deg type="double">165</heading-max-deg>
 					<x-offset-max-m type="double">0.15</x-offset-max-m>
 					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
 				</right>
@@ -150,7 +150,7 @@
 	<sound>
 		<path>Aircraft/O-2A/O-2A-sound.xml</path>
 	</sound>
-  
+
 	<model>
 		<path>Aircraft/O-2A/Models/O-2A.xml</path>
 		<livery>
@@ -158,14 +158,14 @@
 		</livery>
 	</model>
 
-     <controls include="Systems/controls.xml"/> 
+     <controls include="Systems/controls.xml"/>
 
 	<crashed type="bool">0</crashed>
 	<yokes-visible type="bool">1</yokes-visible>
-	
-	<menubar include="Dialogs/O-2A-menu.xml"/>
-	<help include="Dialogs/O-2A-help.xml"/>
-	
+
+	<menubar include="gui/dialogs/O-2A-menu.xml"/>
+	<help include="gui/dialogs/O-2A-help.xml"/>
+
 
 <!--SUBMODELS-->
 
@@ -184,7 +184,7 @@
 		<path>Aircraft/O-2A/Systems/O-2A-instrumentation.xml</path>
 	</instrumentation>
 
-	
+
 
 </sim>
 
@@ -223,7 +223,7 @@
 		<spray-density type="double">0</spray-density>
 	</gear>
 </gear>
-   
+
 <controls>
 	<engines>
 		<engine n="0">
@@ -259,7 +259,7 @@
 	<flight> <!-- los valores ajustan los grados del trim en el inicio*pero no la sesibilidad de ellos -->
 		<aileron-trim type="double">0.0</aileron-trim>
 		<elevator-trim type="double">0.0</elevator-trim>
-		<rudder-trim type="double">0.0</rudder-trim> 
+		<rudder-trim type="double">0.0</rudder-trim>
 	</flight>
 
 	<lighting>
@@ -288,8 +288,8 @@
 		<right>0.0</right>
 	</sunshade>
 	<storage-drawer>0.0</storage-drawer>
-</O-2A>  
-  
+</O-2A>
+
 <Navomatic400A>
     <switches>
         <ap-on type="bool">false</ap-on>
@@ -392,7 +392,7 @@
 
 	<!-- configuracion teclado -->
 
-<input> 
+<input>
   <keyboard>
         <key n="7">
             <name>CTRL-g</name>
@@ -462,7 +462,7 @@
 				}
 				</script>
 			</binding>
-		</key> 
+		</key>
 
 		<key n="67">
 			<name>C</name>
@@ -477,7 +477,7 @@
 				}
 				</script>
 			</binding>
-		</key>       
+		</key>
 	</keyboard>
 </input>
 
