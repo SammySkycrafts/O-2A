@@ -40,7 +40,7 @@
 			<label>Event Log</label>
 			<binding>
 				<command>dialog-show</command>
-				<dialog-name>Event Log</dialog-name>
+				<dialog-name>flightlog</dialog-name>
 			</binding>
 		</item>
 		<item>
@@ -81,27 +81,27 @@
 
   <menu n="3">
 	  <label>Autopilot</label>
-		<name>autopilot</name>  
+		<name>autopilot</name>
 		<item>
 			<label>Navomatic Settings (F11)</label>
 			<name>autopilot-settings</name>
 			<!-- <enabled type="bool">false</enabled> -->
 			<binding>
 				<command>dialog-show</command>
-			  <dialog-name>autopilot</dialog-name>  
+			  <dialog-name>autopilot</dialog-name>
 			</binding>
 		</item>
-		<item> 
-			<label>Route Manager</label>  
+		<item>
+			<label>Route Manager</label>
 			<name>route-manager</name>
 			<enabled type="bool">false</enabled>
 			<binding>
 				<command>dialog-show</command>
 				<dialog-name>route-manager</dialog-name>
-			</binding> 
+			</binding>
 		</item>
 		<item>
-			<label>Previous Waypoint</label> 
+			<label>Previous Waypoint</label>
 			<name>previous-waypoint</name>
 			<enabled type="bool">false</enabled>
 			<binding>
@@ -110,7 +110,7 @@
 			</binding>
 		</item>
 		<item>
-			<label>Next Waypoint</label> 
+			<label>Next Waypoint</label>
 			<name>next-waypoint</name>
 			<enabled type="bool">false</enabled>
 			<binding>
