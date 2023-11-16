@@ -1,0 +1,30 @@
+{
+    "vector": {
+      "version": null,
+      "path": "Nasal/vector.nas"
+    },
+    "missile-code": {
+      "version": null,
+      "path": "Nasal/missile-code.nas"
+    },
+    "damage": {
+      "version": null,
+      "path": "Nasal/damage.nas"
+    },
+    "iff": {
+      "version": null,
+      "path": "Nasal/iff.nas"
+    },
+    "datalink": {
+      "version": null,
+      "path": "Nasal/datalink.nas"
+    },
+    "armament-notification": {
+      "version": null,
+      "path": "Nasal/ArmamentNotification.nas"
+    },
+    "geo-bridged-transmitter": {
+      "version": null,
+      "path": "Nasal/GeoBridgedTransmitter.nas"
+    }
+  }
