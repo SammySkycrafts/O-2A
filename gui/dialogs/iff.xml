@@ -50,7 +50,7 @@
         <binding>
           <command>nasal</command>
           <script><![CDATA[
-            setprop("instrumentation/iff/channel", 0);
+            setprop("instrumentation/iff/channel", 1596);
           ]]></script>
         </binding>
     </button>
@@ -78,7 +78,7 @@
         <binding>
           <command>nasal</command>
           <script><![CDATA[
-            setprop("instrumentation/datalink/channel", 0);
+            setprop("instrumentation/datalink/channel", 782);
           ]]></script>
         </binding>
     </button>

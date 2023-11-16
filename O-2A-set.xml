@@ -2,538 +2,572 @@
 
 <PropertyList>
 
-<sim>
-	<author>NC-687, Zorka</author>
-	<description>O-2A Skymaster</description>
-	<aircraft-version>V20200808</aircraft-version>
-	<rating>
-		<FDM type="int">3</FDM>
-		<systems type="int">3</systems>
-		<cockpit type="int">5</cockpit>
-		<model type="int">5</model>
-	</rating>
-	<status>early-production</status>
-	<flight-model>jsb</flight-model>
-	<aero>O-2A-JSBSim</aero>
+	<sim>
+		<author>NC-687, Zorka</author>
+		<description>O-2A Skymaster</description>
+		<aircraft-version>V1.0</aircraft-version>
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">3</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
+		<status>early-production</status>
+		<flight-model>jsb</flight-model>
+		<aero>O-2A-JSBSim</aero>
 
-	<model>
-		<path archive="y">Aircraft/O-2A/Models/O-2A.xml</path>
-	</model>
-       <submodels>
-      	     <serviceable type="bool">true</serviceable>
-      		<path>Aircraft/O-2A/Models/Effects/guns/submodels.xml</path>
-       </submodels>
+		<model>
+			<path archive="y">Aircraft/O-2A/Models/O-2A.xml</path>
+		</model>
+	       <submodels>
+	      	     <serviceable type="bool">true</serviceable>
+	      		<path>Aircraft/O-2A/Models/Effects/guns/submodels.xml</path>
+	       </submodels>
 
-	<!-- Configuracion de la vista del piloto -->
+		<!-- Configuracion de la vista del piloto -->
 
-	<view>
-		<internal archive="y">true</internal>
-		<config>
-			<x-offset-m archive="y">-0.270</x-offset-m>  <!-- Lateral -->
-			<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
-			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
-			<pitch-offset-deg>-8</pitch-offset-deg>
-			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
-			<limits>
-				<enabled type="bool">true</enabled>
-				<left>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</left>
-				<right>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</right>
-			</limits>
-		</config>
-	</view>
+		<view>
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.270</x-offset-m>  <!-- Lateral -->
+				<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
+				<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+				<pitch-offset-deg>-8</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
 
-	<view n="100">
-		<name>Copilot view</name>
-		<type>lookfrom</type>
-		<internal type="bool">true</internal>
-		<config>
-			<from-model type="bool">true</from-model>
-			<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
-			<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
-			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
-			<pitch-offset-deg>-8</pitch-offset-deg>
-			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
-			<limits>
-				<enabled type="bool">true</enabled>
-				<left>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</left>
-				<right>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</right>
-			</limits>
-		</config>
-	</view>
+		<view n="100">
+			<name>Copilot view</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
+				<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
+				<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+				<pitch-offset-deg>-8</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
 
-	<view n="101">
-		<name>Passenger view</name>
-		<type>lookfrom</type>
-		<internal type="bool">true</internal>
-		<config>
-			<from-model type="bool">true</from-model>
-			<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
-			<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
-			<z-offset-m archive="y"> 0.600</z-offset-m>  <!-- Profundidad -->
-			<pitch-offset-deg>-8</pitch-offset-deg>
-			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
-			<limits>
-				<enabled type="bool">true</enabled>
-				<left>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</left>
-				<right>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</right>
-			</limits>
-		</config>
-	</view>
+		<view n="101">
+			<name>Passenger view</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
+				<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
+				<z-offset-m archive="y"> 0.600</z-offset-m>  <!-- Profundidad -->
+				<pitch-offset-deg>-8</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
 
-	<view n="102">
-		<name>UTILITY VIEW</name>
-		<type>lookfrom</type>
-		<internal type="bool">true</internal>
-		<config>
-			<from-model type="bool">true</from-model>
-			<x-offset-m archive="y"> 0    </x-offset-m>  <!-- Lateral -->
-			<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
-			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
-			<pitch-offset-deg>-8</pitch-offset-deg>
-			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
-			<limits>
-				<enabled type="bool">false</enabled>
-				<left>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</left>
-				<right>
-					<heading-max-deg type="double">165</heading-max-deg>
-					<x-offset-max-m type="double">0.15</x-offset-max-m>
-					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-				</right>
-			</limits>
-		</config>
-	</view>
+		<view n="102">
+			<name>UTILITY VIEW</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y"> 0    </x-offset-m>  <!-- Lateral -->
+				<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
+				<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+				<pitch-offset-deg>-8</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">false</enabled>
+					<left>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">165</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
 
-	<startup>
-		<splash-texture>Aircraft/O-2A/O-2A-splash.png</splash-texture>
-	</startup>
+		<startup>
+			<splash-texture>Aircraft/O-2A/O-2A-splash.png</splash-texture>
+		</startup>
 
-	<gui>
-		<style>
-			<colors>
-				<splash-screen>
-					<red>  1</red>
-					<green>1</green>
-					<blue> 1</blue>
-				</splash-screen>
-			</colors>
-		</style>
-	</gui>
+		<gui>
+			<style>
+				<colors>
+					<splash-screen>
+						<red>  1</red>
+						<green>1</green>
+						<blue> 1</blue>
+					</splash-screen>
+				</colors>
+			</style>
+		</gui>
 
-	<sound>
-		<path>Aircraft/O-2A/O-2A-sound.xml</path>
-	</sound>
+		<sound>
+			<path>Aircraft/O-2A/O-2A-sound.xml</path>
+		</sound>
 
-	<model>
-		<path>Aircraft/O-2A/Models/O-2A.xml</path>
-		<livery>
-			<file type="string">Default</file>
-		</livery>
-	</model>
+		<model>
+			<path>Aircraft/O-2A/Models/O-2A.xml</path>
+			<livery>
+				<file type="string">Default</file>
+			</livery>
+		</model>
 
-     <controls include="Systems/controls.xml"/>
+	     <controls include="Systems/controls.xml"/>
 
-	<crashed type="bool">0</crashed>
-	<yokes-visible type="bool">1</yokes-visible>
+		<crashed type="bool">0</crashed>
+		<yokes-visible type="bool">1</yokes-visible>
 
-	<menubar include="gui/dialogs/O-2A-menu.xml"/>
-	<help include="gui/dialogs/O-2A-help.xml"/>
-
-
-<!--SUBMODELS-->
-
-	<systems>
-		<path>Aircraft/O-2A/Systems/O-2A-systems.xml</path>
-        <autopilot>
-            <path>Aircraft/O-2A/Systems/O-2A-autopilot.xml</path>
-        </autopilot>
-		<property-rule n="100">
-			<name>Instrument-Filter</name>
-			<path>Aircraft/O-2A/Systems/O-2A-filters.xml</path>
-		</property-rule>
-	</systems>
-
-	<instrumentation>
-		<path>Aircraft/O-2A/Systems/O-2A-instrumentation.xml</path>
-	</instrumentation>
+		<menubar include="gui/dialogs/O-2A-menu.xml"/>
+		<help include="gui/dialogs/O-2A-help.xml"/>
 
 
+	<!--SUBMODELS-->
 
-</sim>
+		<systems>
+			<path>Aircraft/O-2A/Systems/O-2A-systems.xml</path>
+	        <autopilot>
+	            <path>Aircraft/O-2A/Systems/O-2A-autopilot.xml</path>
+	        </autopilot>
+			<property-rule n="100">
+				<name>Instrument-Filter</name>
+				<path>Aircraft/O-2A/Systems/O-2A-filters.xml</path>
+			</property-rule>
+		</systems>
 
-<autopilot>
-    <locks>
-        <altitude type="string"></altitude>
-        <heading type="string"></heading>
-    </locks>
-    <settings>
-        <bank-auto type="double">20.0</bank-auto>
-        <bank-select type="double">0</bank-select>
-        <pitch-select type="double">0</pitch-select>
-    </settings>
-</autopilot>
+		<instrumentation>
+			<path>Aircraft/O-2A/Systems/O-2A-instrumentation.xml</path>
+		</instrumentation>
 
-     <!--armament>
-        <guns type="bool">0</guns>
-        <ammo type="double">0</ammo>
-     </armament-->
 
-<gear>
-	<gear n="0">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
-	</gear>
-	<gear n="1">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-	</gear>
-	<gear n="2">
-		<tyre-smoke type="int">0</tyre-smoke>
-		<sprayspeed-ms type="double">0</sprayspeed-ms>
-		<spray-density type="double">0</spray-density>
-	</gear>
-</gear>
 
-<controls>
-	<engines>
-		<engine n="0">
-			<cowl-flaps-norm>0</cowl-flaps-norm>
-			<master-bat>false</master-bat>
-			<master-alt>false</master-alt>
-			<primer type="bool">false</primer>
-			<mixture type="bool">0</mixture>
-			<propeller-pitch type="bool">0</propeller-pitch>
-			<fuel-pump type="bool">false</fuel-pump>
-		</engine>
-		<engine n="1">
-			<cowl-flaps-norm>0</cowl-flaps-norm>
-			<master-alt>false</master-alt>
-            <mixture type="bool">0</mixture>
-			<propeller-pitch type="bool">0</propeller-pitch>
-			<primer type="bool">false</primer>
-			<fuel-pump type="bool">false</fuel-pump>
-		</engine>
-	</engines>
+	</sim>
 
-	<electric>
-		<external-power type ="bool">false</external-power>
-		<battery-switch type ="bool">false</battery-switch>
-	</electric>
+	<autopilot>
+	    <locks>
+	        <altitude type="string"></altitude>
+	        <heading type="string"></heading>
+	    </locks>
+	    <settings>
+	        <bank-auto type="double">20.0</bank-auto>
+	        <bank-select type="double">0</bank-select>
+	        <pitch-select type="double">0</pitch-select>
+	    </settings>
+	</autopilot>
+
+	     <!--armament>
+	        <guns type="bool">0</guns>
+	        <ammo type="double">0</ammo>
+	     </armament-->
 
 	<gear>
-		<brake-parking>1</brake-parking>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
 	</gear>
 
-	<door>0.0</door>
+	<controls>
+		<engines>
+			<engine n="0">
+				<cowl-flaps-norm>0</cowl-flaps-norm>
+				<master-bat>false</master-bat>
+				<master-alt>false</master-alt>
+				<primer type="bool">false</primer>
+				<mixture type="bool">0</mixture>
+				<propeller-pitch type="bool">0</propeller-pitch>
+				<fuel-pump type="bool">false</fuel-pump>
+			</engine>
+			<engine n="1">
+				<cowl-flaps-norm>0</cowl-flaps-norm>
+				<master-alt>false</master-alt>
+	            <mixture type="bool">0</mixture>
+				<propeller-pitch type="bool">0</propeller-pitch>
+				<primer type="bool">false</primer>
+				<fuel-pump type="bool">false</fuel-pump>
+			</engine>
+		</engines>
 
-	<flight> <!-- los valores ajustan los grados del trim en el inicio*pero no la sesibilidad de ellos -->
-		<aileron-trim type="double">0.0</aileron-trim>
-		<elevator-trim type="double">0.0</elevator-trim>
-		<rudder-trim type="double">0.0</rudder-trim>
-	</flight>
+		<electric>
+			<external-power type ="bool">false</external-power>
+			<battery-switch type ="bool">false</battery-switch>
+		</electric>
 
-	<lighting>
-		<beacon type="bool">false</beacon>
-		<strobe type="bool">false</strobe>
-		<nav-lights type="bool">false</nav-lights>
-		<landing-lights alias="/sim/rendering/als-secondary-lights/use-landing-light"/>
-		<taxi-light alias="/sim/rendering/als-secondary-lights/use-alt-landing-light"/>
-	</lighting>
-	<armament>
-        <trigger-cannon alias="/controls/armament/trigger"/>
-        <trigger-rocket type="bool">false</trigger-rocket>
-        <trigger type="bool">false</trigger>
-            <guns type="bool">0</guns>
-        	<ammo type="double">0</ammo><!--425 rounds per gun-->
-		<models type="string">Aircraft/A-10/Models/MParmaments/</models>
-		<msg type="bool">true</msg>
-		<MLW-count type="int">0</MLW-count>
-	</armament>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
 
-</controls>
+		<door>0.0</door>
 
-<O-2A>
-	<sunshade>
-		<left>0.0</left>
-		<right>0.0</right>
-	</sunshade>
-	<storage-drawer>0.0</storage-drawer>
-</O-2A>
+		<flight> <!-- los valores ajustan los grados del trim en el inicio*pero no la sesibilidad de ellos -->
+			<aileron-trim type="double">0.0</aileron-trim>
+			<elevator-trim type="double">0.0</elevator-trim>
+			<rudder-trim type="double">0.0</rudder-trim>
+		</flight>
 
-<Navomatic400A>
-    <switches>
-        <ap-on type="bool">false</ap-on>
-        <alt type="bool">false</alt>
-        <nav type="bool">false</nav>
-    </switches>
-    <push-pull-dial>
-        <pulled-out type="bool">false</pulled-out>
-    </push-pull-dial>
-    <bank-limit type="double">25.0</bank-limit>
-    <powered type="bool">false</powered>
-</Navomatic400A>
+		<lighting>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+			<nav-lights type="bool">false</nav-lights>
+			<landing-lights alias="/sim/rendering/als-secondary-lights/use-landing-light"/>
+			<taxi-light alias="/sim/rendering/als-secondary-lights/use-alt-landing-light"/>
+		</lighting>
+		<armament>
+	        <trigger-cannon alias="/controls/armament/trigger"/>
+	        <trigger-rocket type="bool">false</trigger-rocket>
+	        <trigger type="bool">false</trigger>
+	    </armament>
 
-<nasal>
+	</controls>
+
 	<O-2A>
-		<file>Aircraft/O-2A/Nasal/autopilot.nas</file>
-        <file>Aircraft/O-2A/Nasal/crash-and-stress.nas</file>
-		<file>Aircraft/O-2A/Nasal/light.nas</file>
-		<file>Aircraft/O-2A/Nasal/liveries.nas</file>
-		<file>Aircraft/O-2A/Nasal/dialogs.nas</file>
-		<file>Aircraft/O-2A/Nasal/autostart.nas</file>
-		<file>Aircraft/O-2A/Nasal/GeoBridgedTransmitter.nas</file>
-		<file>Aircraft/O-2A/Nasal/ArmamentNotification.nas</file>
-		<file>Aircraft/O-2A/Nasal/iff.nas</file>
-		<file>Aircraft/O-2A/Nasal/datalink.nas</file>
-		<file>Aircraft/O-2A/Models/Instruments/ADF/KR87.nas</file>
-		<file>Aircraft/O-2A/Models/Instruments/DME/KN62A.nas</file>
-        <file>Aircraft/O-2A/Nasal/O-2A.nas</file>
-		<file>Aircraft/O-2A/Models/Instruments/Navomatic/navomatic.nas</file>
-		<file>Aircraft/O-2A/Models/Instruments/Transponder/KT76A.nas</file>
-		<script><![CDATA[
-            KN62A.new();
-            KT76A.new();
-        ]]></script>
+		<sunshade>
+			<left>0.0</left>
+			<right>0.0</right>
+		</sunshade>
+		<storage-drawer>0.0</storage-drawer>
 	</O-2A>
 
-	<OPRF>
-    <file>Aircraft/O-2A/Nasal/blackout.nas</file>
-	<file>Aircraft/O-2A/Nasal/blacklist.nas</file>
-    <file>Aircraft/O-2A/Nasal/damage.nas</file>
-    <!--file>Aircraft/O-2A/Nasal/payloads.nas</file-->
-	</OPRF>
+	<Navomatic400A>
+	    <switches>
+	        <ap-on type="bool">false</ap-on>
+	        <alt type="bool">false</alt>
+	        <nav type="bool">false</nav>
+	    </switches>
+	    <push-pull-dial>
+	        <pulled-out type="bool">false</pulled-out>
+	    </push-pull-dial>
+	    <bank-limit type="double">25.0</bank-limit>
+	    <powered type="bool">false</powered>
+	</Navomatic400A>
 
-      <guns>
-        <file>Aircraft/O-2A/Nasal/payloads.nas</file>
-      </guns>
+	<nasal>
+		<O-2A>
+			<file>Aircraft/O-2A/Nasal/autopilot.nas</file>
+			<file>Aircraft/O-2A/Nasal/light.nas</file>
+			<file>Aircraft/O-2A/Nasal/liveries.nas</file>
+			<file>Aircraft/O-2A/Nasal/dialogs.nas</file>
+			<file>Aircraft/O-2A/Nasal/autostart.nas</file>
+			<file>Aircraft/O-2A/Models/Instruments/ADF/KR87.nas</file>
+			<file>Aircraft/O-2A/Models/Instruments/DME/KN62A.nas</file>
+	        <file>Aircraft/O-2A/Nasal/O-2A.nas</file>
+			<file>Aircraft/O-2A/Models/Instruments/Navomatic/navomatic.nas</file>
+			<file>Aircraft/O-2A/Models/Instruments/Transponder/KT76A.nas</file>
+			<script><![CDATA[
+	            KN62A.new();
+	            KT76A.new();
+	        ]]></script>
+		</O-2A>
 
-    <HobbsMeter>
-        <file>Aircraft/O-2A/Models/Instruments/Hobbs/hobbs.nas</file>
-		<script><![CDATA[
-            HobbsMeter.new(index: 0, switchPath: 'gear/gear/wow', inverted: 1);
-        ]]></script>
-    </HobbsMeter>
-</nasal>
+		<notifications>
+			<file>Aircraft/O-2A/Nasal/ArmamentNotification.nas</file>
+			<file>Aircraft/O-2A/Nasal/GeoBridgedTransmitter.nas</file>
+		</notifications>
 
-<instrumentation>
-	<adf n="0">
-		<power-btn type="bool">true</power-btn>
-		<volume-norm type="double">0</volume-norm>
-		<adf-btn type="bool">true</adf-btn>
-		<mode type="string">adf</mode>
-	</adf>
-	<dme n="0">
-		<power-btn type="bool">true</power-btn>
-		<mode-btn type="int">0</mode-btn>
-	</dme>
-	<comm n="0">
-		<power-btn type="bool">true</power-btn>
-		<volume type="double">1.0</volume>
-		<test-btn type="bool">false</test-btn>
-	</comm>
-	<nav n="0">
-		<power-btn type="bool">false</power-btn>
-		<audio-btn type="bool">false</audio-btn>
-		<volume type="double">0</volume>
-	</nav>
-	<comm n="1">
-		<power-btn type="bool">true</power-btn>
-		<volume type="double">1.0</volume>
-		<test-btn type="bool">false</test-btn>
-	</comm>
-	<nav n="1">
-		<power-btn type="bool">false</power-btn>
-		<audio-btn type="bool">false</audio-btn>
-		<volume type="double">0</volume>
-	</nav>
-    <transponder>
-        <inputs>
-            <knob-mode type="int">0</knob-mode>
-        </inputs>
-    </transponder>
-	<datalink>
-	        <channel type="int">42</channel>
-	        <power_prop type="string">controls/electric/engine[0]/generator</power_prop>
-	        <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
-	        <receive_period type="double">1</receive_period>
-	        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
-    </datalink>
-</instrumentation>
+		<vector>
+	        <file>Aircraft/O-2A/Nasal/vector.nas</file>
+	    </vector>
+
+	    <damage>
+	    	<file>Aircraft/O-2A/Nasal/damage.nas</file>
+	    </damage>
+
+	    <iff>
+	    	<file>Aircraft/O-2A/Nasal/iff.nas</file>
+	    </iff>
+
+	    <datalink>
+	    	<file>Aircraft/O-2A/Nasal/datalink.nas</file>
+	    </datalink>
+
+	     <guns>
+	        <file>Aircraft/O-2A/Nasal/payloads.nas</file>
+	     </guns>
+
+	    <HobbsMeter>
+	        <file>Aircraft/O-2A/Models/Instruments/Hobbs/hobbs.nas</file>
+			<script><![CDATA[
+	            HobbsMeter.new(index: 0, switchPath: 'gear/gear/wow', inverted: 1);
+	        ]]></script>
+	    </HobbsMeter>
+
+	</nasal>
+
+	<instrumentation>
+		<adf n="0">
+			<power-btn type="bool">true</power-btn>
+			<volume-norm type="double">0</volume-norm>
+			<adf-btn type="bool">true</adf-btn>
+			<mode type="string">adf</mode>
+		</adf>
+		<dme n="0">
+			<power-btn type="bool">true</power-btn>
+			<mode-btn type="int">0</mode-btn>
+		</dme>
+		<comm n="0">
+			<power-btn type="bool">true</power-btn>
+			<volume type="double">1.0</volume>
+			<test-btn type="bool">false</test-btn>
+		</comm>
+		<nav n="0">
+			<power-btn type="bool">false</power-btn>
+			<audio-btn type="bool">false</audio-btn>
+			<volume type="double">0</volume>
+		</nav>
+		<comm n="1">
+			<power-btn type="bool">true</power-btn>
+			<volume type="double">1.0</volume>
+			<test-btn type="bool">false</test-btn>
+		</comm>
+		<nav n="1">
+			<power-btn type="bool">false</power-btn>
+			<audio-btn type="bool">false</audio-btn>
+			<volume type="double">0</volume>
+		</nav>
+	    <transponder>
+	        <inputs>
+	            <knob-mode type="int">0</knob-mode>
+	        </inputs>
+	    </transponder>
+		<datalink>
+		    <channel type="int">69</channel>
+		    <power_prop type="string">controls/electric/engine[0]/generator</power_prop>
+		    <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+		    <receive_period type="double">1</receive_period>
+	    </datalink>
+	    <iff><!--M4-->
+	    	<channel type="int">1101</channel>
+		    <power_prop type="string">controls/electric/engine[0]/generator</power_prop><!--Need to change this, and DL when some more advanced systems are added-->
+		    <channel_prop type="string">instrumentation/iff/channel</channel_prop>\
+		</iff>
+
+	</instrumentation>
 
 	<!-- configuracion teclado -->
 
-<input>
-  <keyboard>
-        <key n="7">
-            <name>CTRL-g</name>
-            <mod-ctrl>
-                <desc>Select cannon</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>props.globals.getNode("controls/armament/trigger-cannon",1).alias("controls/armament/trigger");
-                            props.globals.getNode("controls/armament/trigger-rocket",1).unalias();
-                            props.globals.getNode("controls/armament/trigger-rocket",1).setBoolValue(0)</script>
-                </binding>
-            </mod-ctrl>
-        </key>
+	<input>
+	  <keyboard>
+	        <key n="7">
+	            <name>CTRL-g</name>
+	            <mod-ctrl>
+	                <desc>Select cannon</desc>
+	                <binding>
+	                    <command>nasal</command>
+	                    <script>props.globals.getNode("controls/armament/trigger-cannon",1).alias("controls/armament/trigger");
+	                            props.globals.getNode("controls/armament/trigger-rocket",1).unalias();
+	                            props.globals.getNode("controls/armament/trigger-rocket",1).setBoolValue(0)</script>
+	                </binding>
+	            </mod-ctrl>
+	        </key>
 
-        <key n="6">
-            <name>CTRL-f</name>
-                <desc>Select rockets</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>props.globals.getNode("controls/armament/trigger-rocket",1).alias("controls/armament/trigger");
-                            props.globals.getNode("controls/armament/trigger-cannon",1).unalias();
-                            props.globals.getNode("controls/armament/trigger-cannon",1).setBoolValue(0);</script>
-          </binding>
-      </key>
+	        <key n="6">
+	            <name>CTRL-f</name>
+	                <desc>Select rockets</desc>
+	                <binding>
+	                    <command>nasal</command>
+	                    <script>props.globals.getNode("controls/armament/trigger-rocket",1).alias("controls/armament/trigger");
+	                            props.globals.getNode("controls/armament/trigger-cannon",1).unalias();
+	                            props.globals.getNode("controls/armament/trigger-cannon",1).setBoolValue(0);</script>
+	          </binding>
+	      </key>
 
 
-      <key n="101">
-        <name>e</name>
-        <desc>Fire MG</desc>
-        <binding>
-            <command>property-toggle</command>
-            <property>controls/armament/trigger</property>
-        </binding>
-        <mod-up>
-          <binding>
-            <command>property-toggle</command>
-            <property>controls/armament/trigger</property>
-          </binding>
-        </mod-up>
-      </key>
+	      <key n="101">
+	        <name>e</name>
+	        <desc>Fire MG</desc>
+	        <binding>
+	            <command>property-toggle</command>
+	            <property>controls/armament/trigger</property>
+	        </binding>
+	        <mod-up>
+	          <binding>
+	            <command>property-toggle</command>
+	            <property>controls/armament/trigger</property>
+	          </binding>
+	        </mod-up>
+	      </key>
 
-		<key n="100">
-			<name>d</name>
-			<desc>Open/Close door</desc>
-			<binding>
-				<command>nasal</command>
-				<script>
-				if(getprop("controls/door[0]") > 0) {
-					interpolate("controls/door[0]", 0, 1);
-					} else {
-					interpolate("controls/door[0]", 1, 1);
-				}
-				</script>
-			</binding>
-		</key>
+			<key n="100">
+				<name>d</name>
+				<desc>Open/Close door</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					if(getprop("controls/door[0]") > 0) {
+						interpolate("controls/door[0]", 0, 1);
+						} else {
+						interpolate("controls/door[0]", 1, 1);
+					}
+					</script>
+				</binding>
+			</key>
 
-		<key n="99">
-			<name>c</name>
-			<desc>Open/Close_Cowl_Flaps_Del</desc>
-			<binding>
-				<command>nasal</command>
-				<script>
-				if(getprop("controls/engines/engine[0]/cowl-flaps-norm") > 0) {
-					interpolate("controls/engines/engine[0]/cowl-flaps-norm", 0, 1);
-					} else {
-					interpolate("controls/engines/engine[0]/cowl-flaps-norm", 1, 1);
-				}
-				</script>
-			</binding>
-		</key>
+			<key n="99">
+				<name>c</name>
+				<desc>Open/Close_Cowl_Flaps_Del</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					if(getprop("controls/engines/engine[0]/cowl-flaps-norm") > 0) {
+						interpolate("controls/engines/engine[0]/cowl-flaps-norm", 0, 1);
+						} else {
+						interpolate("controls/engines/engine[0]/cowl-flaps-norm", 1, 1);
+					}
+					</script>
+				</binding>
+			</key>
 
-		<key n="67">
-			<name>C</name>
-				<desc>Open/Close_Cowl_Flaps_Tras</desc>
-			<binding>
-				<command>nasal</command>
-				<script>
-				if(getprop("controls/engines/engine[1]/cowl-flaps-norm") > 0) {
-					interpolate("controls/engines/engine[1]/cowl-flaps-norm", 0, 1);
-					} else {
-					interpolate("controls/engines/engine[1]/cowl-flaps-norm", 1, 1);
-				}
-				</script>
-			</binding>
-		</key>
-	</keyboard>
-</input>
+			<key n="67">
+				<name>C</name>
+					<desc>Open/Close_Cowl_Flaps_Tras</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					if(getprop("controls/engines/engine[1]/cowl-flaps-norm") > 0) {
+						interpolate("controls/engines/engine[1]/cowl-flaps-norm", 0, 1);
+						} else {
+						interpolate("controls/engines/engine[1]/cowl-flaps-norm", 1, 1);
+					}
+					</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
 
-<payload>
-	<weight>
-		<name type="string">Pilot</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Observer 1</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">JerryCans</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Trunk</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">Radio OP</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<weight>
-		<name type="string">PsyOps OP</name>
-		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
-		<min-lb type="double">0  </min-lb>
-		<max-lb type="double">300</max-lb>
-	</weight>
-	<armament>
-		<models type="string">Aircraft/O-2A/Models/mparms/</models>
-		<msg type="bool">true</msg>
-		<MLW-count type="int">0</MLW-count>
-	</armament>
-</payload>
+	<payload>
+		<weight>
+			<name type="string">Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Observer 1</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<weight>
+			<name type="string">JerryCans</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Trunk</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Radio OP</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<weight>
+			<name type="string">PsyOps OP</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+			<min-lb type="double">0  </min-lb>
+			<max-lb type="double">300</max-lb>
+		</weight>
+		<armament>
+	        <guns type="bool">0</guns>
+	        <ammo type="double">0</ammo><!--425 rounds per gun-->
+	        <models>Aircraft/O-2A/Models/damage/</models>
+	        <enable-craters type="bool">true</enable-craters>
+	        <MLW-bearing type="double">0</MLW-bearing>
+	        <MLW-count type="int">0</MLW-count>
+	        <MLW-launcher type="string"></MLW-launcher>
+	        <MAW-bearing type="double">0</MAW-bearing>
+	        <MAW-active type="bool">false</MAW-active>
+	        <MAW-semiactive type="bool">false</MAW-semiactive>
+	        <msg type="bool">false</msg>
+	        <spike type="bool">false</spike>
+	        <tacview type="bool">false</tacview>
+		</armament>
+		<d-config>
+	        <full_damage_dist_m type="double">0.5</full_damage_dist_m>
+	        <use_hitpoints_instead_of_failure_modes_bool type="bool">false</use_hitpoints_instead_of_failure_modes_bool>
+	        <hp_max type="double">80</hp_max>
+	        <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+	        <hitable_by_cannon type="bool">true</hitable_by_cannon>
+	        <is_fleet type="bool">false</is_fleet>
+	        <rwr_to_screen type="bool">false</rwr_to_screen>
+	        <rwr_audio_extended type="bool">false</rwr_audio_extended>
+	        <tacview_supported type="bool">false</tacview_supported>
+	        <m28_auto type="bool">false</m28_auto>
+	        <mlw_max type="double">0</mlw_max>
+	        <auto_flare_caller type="bool">false</auto_flare_caller>
+    	</d-config>
+	</payload>
 
-<fdm>
-	<jsbsim>
-		<ice>
-			<wing type="double">0.0</wing>
-			<stabilizer type="double">0.0</stabilizer>
-			<propeller type="double">0.0</propeller>
-			<fuselage type="double">0.0</fuselage>
-		</ice>
-	</jsbsim>
-</fdm>
+	<fdm>
+		<jsbsim>
+			<ice>
+				<wing type="double">0.0</wing>
+				<stabilizer type="double">0.0</stabilizer>
+				<propeller type="double">0.0</propeller>
+				<fuselage type="double">0.0</fuselage>
+			</ice>
+		</jsbsim>
+	</fdm>
 
 </PropertyList>
