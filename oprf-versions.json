@@ -8,7 +8,7 @@
     "path": "Nasal/missile-code.nas"
   },
   "damage": {
-    "version": "1.3.2",
+    "version": "1.4.3",
     "path": "Nasal/damage.nas"
   },
   "iff": {
